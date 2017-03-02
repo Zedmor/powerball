@@ -1,14 +1,11 @@
+import collections
 import logging
-import operator
 from random import shuffle
 
-import collections
 from django.db import models
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.views import generic
-from functools import cmp_to_key
-from django.shortcuts import render_to_response
 
 from .forms import PowerballForm  # , DeleteForm
 
@@ -22,15 +19,6 @@ from .models import Drawentry
 class HomePage(generic.TemplateView):
     template_name = "home.html"
     http_method_names = ['get', 'post']
-
-    def compare_with_ties(x, y):
-
-        if x < y:
-            return(-1)
-        elif x > y:
-            return(1)
-        else:
-            return (random.randint(0, 1) * 2 - 1)
 
     def winningnumberhelper(self, allnumbers):
         """
@@ -58,7 +46,6 @@ class HomePage(generic.TemplateView):
         counts = collections.Counter(power_ball_list)
         power_ball_list = f7(sorted(power_ball_list, key=lambda x: -counts[x]))
 
-
         top5nums = numberlist[:5]
         poweballnum = power_ball_list[:1]
 
@@ -67,7 +54,6 @@ class HomePage(generic.TemplateView):
                                             ))}
 
     def get(self, request, *args, **kwargs):
-        # deletebutton = DeleteForm()
         # todo delete button
         if 'error' in request.GET and request.GET['error'] == \
                 'NonUniqueNumbers':
