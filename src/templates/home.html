@@ -28,12 +28,14 @@
       {% if not formsubmiterror %}
       <p class="lead">Numbers you entered</p>
       {% endif %}
-          {% if formsubmiterror %}
-          <p class="lead" style="color:red">Please enter non-duplicate numbers</p>
-          {% endif %}
+
 
       {% endif %}
+        {% if formsubmiterror %}
+          <p class="lead" style="color:red">Please enter non-duplicate numbers</p>
+          {% endif %}
         {%  if not userdraw %}
+
           <p class="lead">Plase select your numbers below</p>
             {% endif %}
           <form action="post_url/" method="post">
