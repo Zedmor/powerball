@@ -1,1 +1,1 @@
-web: gunicorn src.powerball.wsgi --log-file -
+web: gunicorn --pythonpath src powerball.wsgi --log-file -
