@@ -9,15 +9,13 @@ It
  is built with [Python][0] using the 
 [Django Web Framework][1].
 
-This project has the following basic apps:
+Project is in powerball app.
 
-* App1 (short desc)
-* App2 (short desc)
-* App3 (short desc)
+Users are able to register accounts, login, logout, enter their numbers and watch other users entries (as registered and unregistered users).
 
 ## User story
 
-Powerball story:
+Powerball story as provided:
 
 As a Greenphire employee I would like to add my favorite 6 numbers to consider for a Powerball entry ticket so that I can win 1 billion dollars.
 
@@ -34,22 +32,22 @@ Powerball numbers.
 * Display the final Powerball number based on the requirements above.
 
 Sample output:
-Enter your first name: Wade
-Enter your last name: Wilson
-select 1st # (1 thru 69): 12
-select 2nd # (1 thru 69 excluding 12): 20
-select 3rd # (1 thru 69 excluding 12 and 20): 23
-select 4th # (1 thru 69 excluding 12, 20, and 23: 56
-select 5th # (1 thru 69 excluding 12, 20, 23, and 56: 30
-select Power Ball # (1 thru 26): 25
-
-
-Wade Wilson 15 26 33 60 34 Powerball: 16
-Frank Castle 15 26 34 56 61 Powerball: 16
-
-
-Powerball winning number:
-15 26 34 55 63 Powerball: 16
+ 
+    Enter your first name: Wade
+    Enter your last name: Wilson
+    select 1st # (1 thru 69): 12
+    select 2nd # (1 thru 69 excluding 12): 20
+    select 3rd # (1 thru 69 excluding 12 and 20): 23
+    select 4th # (1 thru 69 excluding 12, 20, and 23: 56
+    select 5th # (1 thru 69 excluding 12, 20, 23, and 56: 30
+    select Power Ball # (1 thru 26): 25
+    
+     
+    Wade Wilson 15 26 33 60 34 Powerball: 16
+    Frank Castle 15 26 34 56 61 Powerball: 16
+     
+    Powerball winning number:
+    15 26 34 55 63 Powerball: 16
 
 ## Installation
 
