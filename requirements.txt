@@ -1,1 +1,16 @@
--r requirements/development.txt
+Django==1.10.5
+django-admin-bootstrapped==2.5.7
+django-authtools==1.5.0
+django-braces==1.11.0
+django-crispy-forms==1.6.1
+django-debug-toolbar==1.6
+django-environ==0.4.1
+easy-thumbnails==2.3
+olefile==0.44
+Pillow==4.0.0
+pkg-resources==0.0.0
+psycopg2==2.7
+six==1.10.0
+sqlparse==0.2.2
+Werkzeug==0.11.15
+whitenoise==3.3.0

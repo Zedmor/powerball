@@ -2,10 +2,20 @@
 #    DJANGO_SETTINGS_MODULE=powerball.settings.production
 from .base import *             # NOQA
 import logging.config
+import dj_database_url
+from decouple import config
 
 # For security and performance reasons, DEBUG is turned off
 DEBUG = False
 TEMPLATE_DEBUG = False
+
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 
 # Must mention ALLOWED_HOSTS in production!
 # ALLOWED_HOSTS = ["powerball.com"]

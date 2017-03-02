@@ -10,7 +10,9 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "powerball.settings.production")
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise
 application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
 
 # Wrap werkzeug debugger if DEBUG is on
 from django.conf import settings
