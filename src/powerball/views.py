@@ -119,9 +119,6 @@ class HomePage(generic.TemplateView):
             return HttpResponseRedirect('/')
         elif addnewform.errors:
             return HttpResponseRedirect('/?error=NonUniqueNumbers')
-
-            # kwargs["formerror"] = addnewform.errors
-            # return self.get(request, *args, **kwargs)
         else:
             return HttpResponseRedirect('/')
             # TODO Check form validity - validators? Inline?
