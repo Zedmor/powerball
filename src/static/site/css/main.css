@@ -4,7 +4,7 @@ html, body{
     height:100%;		/* For full height images */
 }
 
-.starter-template {
+.main-view {
   padding: 40px 15px;
   text-align: center;
 }
@@ -91,6 +91,10 @@ body>.navbar-transparent {
 
 .corporate-jumbo p {
     font-weight: 500;
+}
+
+.error {
+    color: #FF0000;
 }
 
 .corporate-jumbo .well legend {

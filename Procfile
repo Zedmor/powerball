@@ -1,0 +1,1 @@
+web: gunicorn src.powerball.wsgi --log-file -
