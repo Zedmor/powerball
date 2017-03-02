@@ -27,7 +27,8 @@
       {% if userdraw %}
       {% if not formsubmiterror %}
       <p class="lead">Numbers you entered</p>
-      {% else %}
+      {% endif %}
+          {% if formsubmiterror %}
           <p class="lead" style="color:red">Please enter non-duplicate numbers</p>
           {% endif %}
 
