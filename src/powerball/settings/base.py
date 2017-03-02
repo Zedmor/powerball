@@ -62,7 +62,7 @@ if exists(env_file):
 # Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = ['powerball-greenphire.herokuapp.com']
+ALLOWED_HOSTS = ['powerball-greenphire.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -125,7 +125,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-ALLOWED_HOSTS = []
 
 # Crispy Form Theme - Bootstrap 3
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
