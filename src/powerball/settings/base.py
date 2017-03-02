@@ -15,11 +15,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Build paths inside the project like this: join(BASE_DIR, "directory")
 BASE_DIR = dirname(dirname(dirname(__file__)))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
-#STATICFILES_DIRS = [join(BASE_DIR, 'static')]
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+#STATIC_URL = '/staticfiles/'
+STATICFILES_DIRS = [join(BASE_DIR, 'static')]
+# STATICFILES_DIRS = (
+#     os.path.join(PROJECT_ROOT, 'staticfiles'),
+# )
 MEDIA_ROOT = join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
