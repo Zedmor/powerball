@@ -11,6 +11,7 @@ TEMPLATE_DEBUG = False
 
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
+
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
@@ -18,7 +19,7 @@ DATABASES = {
 }
 
 # Must mention ALLOWED_HOSTS in production!
-# ALLOWED_HOSTS = ["powerball.com"]
+ALLOWED_HOSTS = ['powerball-greenphire.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Cache the templates in memory for speed-up
 loaders = [
@@ -32,7 +33,7 @@ TEMPLATES[0]['OPTIONS'].update({"loaders": loaders})
 TEMPLATES[0].update({"APP_DIRS": False})
 
 # Define STATIC_ROOT for the collectstatic command
-STATIC_ROOT = join(BASE_DIR, '..', 'site', 'static')
+#STATIC_ROOT = join(BASE_DIR, '..', 'site', 'static')
 
 # Log everything to the logs directory at the top
 LOGFILE_ROOT = join(dirname(BASE_DIR), 'logs')
